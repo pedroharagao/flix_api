@@ -34,7 +34,7 @@ class MovieModelSerializer(serializers.ModelSerializer):
     def validate_resume(self, value):
         if len(value) > 500:
             raise serializers.ValidationError('tem que ter menos de 200')
-        return
+        return value
 
 
 class MovieListDetailSerializer(serializers.ModelSerializer):
